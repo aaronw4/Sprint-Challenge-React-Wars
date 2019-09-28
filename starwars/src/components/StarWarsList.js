@@ -7,10 +7,11 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 100px 20px 0 20px;
 `;
 
 export function StarWarsList() {
-    const [data, setData] = useState([]);  
+    const [data, setData] = useState([]);
 
   useEffect(() =>{
     async function fetchData() {
@@ -38,6 +39,7 @@ export function StarWarsList() {
                     hair={people.hair_color}
                     skin={people.skin_color}
                     eyes={people.eye_color}
+                    homeWorld={people.homeworld}
                 />
             );
         })}
