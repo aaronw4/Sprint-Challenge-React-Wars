@@ -2,21 +2,40 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import StarWarsCard from './StarWarsCard';
 import styled from 'styled-components';
+import Button from './Button';
 
 const Container = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 100px 20px 0 20px;
+    margin: 80px 20px 0 20px;
+`;
+
+const Page = styled.span`
+    color: #130C0E;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #DCDCE5;
+    border-radius: 5px;
+    padding: 2px;
 `;
 
 export function StarWarsList() {
     const [data, setData] = useState([]);
+    const [count, setCount] = useState(1);
+
+    function forward() {
+        setCount(count + 1);
+    }
+
+    function reverse() {
+        setCount(count -1);
+    }
 
   useEffect(() =>{
     async function fetchData() {
       try {
-        const swData = await axios.get('https://swapi.co/api/people');
+        const swData = await axios.get(`https://swapi.co/api/people/?page${count}=&page=${count}`);
         console.log(swData);
         setData(swData.data.results);
       }
@@ -25,10 +44,16 @@ export function StarWarsList() {
       }
     }
     fetchData();
-  }, []);
+  }, [count]);
 
-  return (      
-    <Container>
+  return (
+    <div>
+    <Button 
+        count={count}
+        forward={forward}
+        reverse={reverse}
+    />   
+    <Container> 
         {data.map(people => {
             return(
                 <StarWarsCard
@@ -44,5 +69,7 @@ export function StarWarsList() {
             );
         })}
     </Container>
+    <Page>Page {count}</Page>
+    </div>  
   );
 }

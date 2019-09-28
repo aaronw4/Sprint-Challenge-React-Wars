@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -12,7 +12,6 @@ const Card = styled.div`
 
 export default function StarWarsCard(props) {
     let planets = axios.get(props.homeWorld);
-    console.log(planets);
 
     return (
         <Card>
