@@ -10,7 +10,7 @@ export function StarWarsList() {
       try {
         const swData = await axios.get('https://swapi.co/api/people');
         console.log(swData);
-        setData(swData.data);
+        setData(swData.data.results);
       }
       catch(err) {
         console.log(err);
@@ -21,9 +21,13 @@ export function StarWarsList() {
 
   return (      
     <div>
-        <StarWarsCard
-            name={data.results.name}
-        />
+        {data.map(people => {
+            return(
+                <StarWarsCard
+                    name={people.name}
+                />
+            );
+        })}
     </div>
-  )
+  );
 }
