@@ -3,6 +3,7 @@ import axios from 'axios';
 import StarWarsCard from './StarWarsCard';
 import styled from 'styled-components';
 import Button from './Button';
+import Planet from './Planets';
 
 const Container = styled.div`
     display: flex;
@@ -32,7 +33,7 @@ export function StarWarsList() {
         setCount(count -1);
     }
 
-  useEffect(() =>{
+  useEffect(() => {
     async function fetchData() {
       try {
         const swData = await axios.get(`https://swapi.co/api/people/?page${count}=&page=${count}`);
@@ -46,7 +47,7 @@ export function StarWarsList() {
     fetchData();
   }, [count]);
 
-  return (
+  return(
     <div>
     <Button 
         count={count}
@@ -57,6 +58,7 @@ export function StarWarsList() {
         {data.map(people => {
             return(
                 <StarWarsCard
+                    key={people.url}
                     name={people.name}
                     gender={people.gender}
                     height={people.height}
