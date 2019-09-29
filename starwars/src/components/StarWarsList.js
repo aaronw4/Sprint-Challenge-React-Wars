@@ -3,13 +3,13 @@ import axios from 'axios';
 import StarWarsCard from './StarWarsCard';
 import styled from 'styled-components';
 import Button from './Button';
-import Planet from './Planets';
 
 const Container = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 80px 20px 0 20px;
+    padding: 0;
 `;
 
 const Page = styled.span`

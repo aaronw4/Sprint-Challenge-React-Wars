@@ -21,6 +21,6 @@ export default function Planet(props) { const [planets, setPlanets] = useState([
     }, [number]);
 
     return(
-        <p>Home planet is {planets.name}.</p>
+        <span>Their home planet is {planets.name}.</span>
     );
 }
