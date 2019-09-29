@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
-export default function Planet(props) { 
-    return(<p>{props.homeWorld}</p>);
-    /*const [planets, setPlanets] = useState([]);
+export default function Planet(props) { const [planets, setPlanets] = useState([]);
     let homePlanet = props.homeWorld;
     let array = homePlanet.split('');
     let number = array[29];
@@ -23,6 +21,6 @@ export default function Planet(props) {
     }, [number]);
 
     return(
-        <p>{planets.name}</p>
-    );*/
+        <p>Home planet is {planets.name}.</p>
+    );
 }
