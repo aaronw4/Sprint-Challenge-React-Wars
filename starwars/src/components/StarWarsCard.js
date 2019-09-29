@@ -12,10 +12,14 @@ const Card = styled.div`
     border-radius: 10px;
 `;
 
+const Title = styled.h2`
+    text-decoration: underline;
+`;
+
 export default function StarWarsCard(props) {
     return (
         <Card>
-            <h2>{props.name}</h2>
+            <Title>{props.name}</Title>
             <p>{props.name} is
             {props.gender === 'n/a' ? <span> {props.height}cm, {props.mass}kg, </span> : <span> a {props.gender}, {props.height}cm tall, {props.mass}kg, </span>}            
             {props.hair === 'none' || props.hair === 'n/a' ? <span>has {props.eyes} eyes, no hair, and {props.skin} skin.</span> : <span>has {props.eyes} eyes, {props.hair} hair, and {props.skin} skin.</span>}  
