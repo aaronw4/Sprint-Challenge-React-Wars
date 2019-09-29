@@ -67,6 +67,7 @@ export function StarWarsList() {
                     skin={people.skin_color}
                     eyes={people.eye_color}
                     homeWorld={people.homeworld}
+                    species={people.species}
                 />
             );
         })}

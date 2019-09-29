@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
-export default function Planet(props) { const [planets, setPlanets] = useState([]);
+export default function Planet(props) { 
+    const [planets, setPlanets] = useState([]);
     let homePlanet = props.homeWorld;
     let array = homePlanet.split('');
     let number = array[29];
@@ -9,8 +10,7 @@ export default function Planet(props) { const [planets, setPlanets] = useState([
     useEffect(() => {
         async function fetchData() {
             try {
-                const planetsData = await axios.get(`https://swapi.co/api/planets/${number}/`);
-                console.log(planetsData);
+                const planetsData = await axios.get(`https://swapi.co/api/planets/${number}/`);                
                 setPlanets(planetsData.data);
             }
             catch(err) {
@@ -21,6 +21,6 @@ export default function Planet(props) { const [planets, setPlanets] = useState([
     }, [number]);
 
     return(
-        <span>Their home planet is {planets.name}.</span>
+        <span>from the planet {planets.name}.</span>
     );
 }
