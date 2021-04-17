@@ -36,7 +36,7 @@ export function StarWarsList() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const swData = await axios.get(`https://swapi.co/api/people/?page${count}=&page=${count}`);
+        const swData = await axios.get(`https://swapi.dev/api/people/?page${count}=&page=${count}`);
         console.log(swData);
         setData(swData.data.results);
       }

@@ -19,6 +19,6 @@ export default function Species(props) {
     }, [homeSpecies]);
 
     return(
-        <span> {race.name === 'Droid' ? `${props.name} is a ${race.name} and `: `${props.name} is ${race.name} and `}</span>
+        <span> {race.name === undefined ? `${props.name} is a human and `: `${props.name} is a ${race.name} and `}</span>
     );
 }
