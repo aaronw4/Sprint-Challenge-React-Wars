@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Sprint-Challenge-React-Wars/static/css/main.c3abea10.chunk.css",
+    "main.js": "/Sprint-Challenge-React-Wars/static/js/main.df6c831f.chunk.js",
+    "main.js.map": "/Sprint-Challenge-React-Wars/static/js/main.df6c831f.chunk.js.map",
+    "runtime~main.js": "/Sprint-Challenge-React-Wars/static/js/runtime~main.e7db6641.js",
+    "runtime~main.js.map": "/Sprint-Challenge-React-Wars/static/js/runtime~main.e7db6641.js.map",
+    "static/js/2.10b4465b.chunk.js": "/Sprint-Challenge-React-Wars/static/js/2.10b4465b.chunk.js",
+    "static/js/2.10b4465b.chunk.js.map": "/Sprint-Challenge-React-Wars/static/js/2.10b4465b.chunk.js.map",
+    "index.html": "/Sprint-Challenge-React-Wars/index.html",
+    "precache-manifest.c77dc0a31ced65fc5850093df282ae2f.js": "/Sprint-Challenge-React-Wars/precache-manifest.c77dc0a31ced65fc5850093df282ae2f.js",
+    "service-worker.js": "/Sprint-Challenge-React-Wars/service-worker.js",
+    "static/css/main.c3abea10.chunk.css.map": "/Sprint-Challenge-React-Wars/static/css/main.c3abea10.chunk.css.map",
+    "static/media/index.css": "/Sprint-Challenge-React-Wars/static/media/sw-bg.dff75a1f.jpg"
+  }
+}
